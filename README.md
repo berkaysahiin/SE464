@@ -6,7 +6,7 @@ Streamlit app for hate speech detection using a fine-tuned BERT-based model. The
 
 - Code and data is available at this [notebook](https://www.kaggle.com/code/berkaysahiin/bert-fine-tune)
 
-- The app is deployed and can be tested [here](https://huggingface.co/spaces/berkaysahiin/hataspeechlabeler).
+- The app is deployed and can be tested [here](https://huggingface.co/spaces/berkaysahiin/hataspeechlabeler) (also  available at this [link](https://huggingface.co/spaces/berkaysahiin/berkaysahiin-bert-base-uncased-jigsaw-toxic-classifier))
 
 - The model is available at [hugging face](https://huggingface.co/berkaysahiin/bert-base-uncased-jigsaw-toxic-classifier)
  
