@@ -2,15 +2,15 @@
 
 ## Hate Speech Labeler
 
-A Streamlit app for detecting hate speech using a fine-tuned BERT-based model.
+Streamlit app for hate speech detection using a fine-tuned BERT-based model. The model is trained on the Jigsaw Toxic Comment Classification Challenge dataset for multi-label classification.
 
-## Usage
+- The app is deployed and accessible [here.](https://hatespeechlabeler.streamlit.app)
+- Code and data is available at this [notebook](https://www.kaggle.com/code/berkaysahiin/bert-fine-tune).
 
-1. **Local Installation:**
+ ## Local Installation 
    - Clone the repository:
      ```bash
-     git clone https://github.com/berkaysahiin/hate-speech-labeler.git](https://github.com/berkaysahiin/SE464.git
-     ```
+     git clone https://github.com/berkaysahiin/SE464.git
    - Change into the directory:
      ```bash
      cd SE464
@@ -22,21 +22,19 @@ A Streamlit app for detecting hate speech using a fine-tuned BERT-based model.
    - Run the Streamlit app:
      ```bash
      streamlit run main.py
-     ```
 
-2. **Deployment:**
-   - The app is deployed and accessible at [hatespeechlabeler.streamlit.app](https://hatespeechlabeler.streamlit.app).
+      ```   
 
 ## Model
 
-The BERT-based model used in this app was fine-tuned for hate speech detection.
+- Data preprocessing involves cleaning text data, tokenization, and formatting for multi-label classification.
+
+- The model is trained with TrainingArguments and Trainer from the Transformers library.
+
+- Metrics such as F1 score, ROC AUC, and accuracy are used to evaluate the model's performance on the test set.
 
 ## Development Environment
 
 - Python version: 3.8.5
 - Streamlit version: 1.2.0
 - Transformers version: (Specify the version you used for fine-tuning)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
