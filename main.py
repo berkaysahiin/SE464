@@ -1,4 +1,5 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
+import torch
 import streamlit as st
 
 model_path = "model"
