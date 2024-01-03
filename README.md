@@ -40,9 +40,4 @@ Streamlit app for hate speech detection using a fine-tuned BERT-based model. The
 - The model is trained with TrainingArguments and Trainer from the Transformers library.
 
 - Metrics such as F1 score, ROC AUC, and accuracy are used to evaluate the model's performance on the test set.
-
-## Development Environment
-
-- Python version: 3.8.5
-- Streamlit version: 1.2.0
-- Transformers version: (Specify the version you used for fine-tuning)
+  
