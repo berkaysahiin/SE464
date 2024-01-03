@@ -17,7 +17,7 @@ label_to_format = {
     'insult' : 'Insult'
 }
 
-
+@st.cache_resource(show_spinner=False)
 def test_sentence(sentence: str, thresh_hold=0.2, debug=False):
     results = classifier(sentence)
 
@@ -42,7 +42,8 @@ def test_sentence(sentence: str, thresh_hold=0.2, debug=False):
     else:
         st.info('Your sentence is totally fine')
 
-if __name__ == "__main__":
+@st.cache_resource(show_spinner=False)
+def main():
     st.title('Hate Speech Labeler')
     user_sentence = st.text_input('Enter your sentence to test it', value='I love NLP')
     user_threshold = st.number_input('Select threshold value', min_value=0.0, max_value=1.0, value=0.4)
@@ -53,3 +54,6 @@ if __name__ == "__main__":
             test_sentence(sentence=user_sentence, thresh_hold=user_threshold)
         else:
             st.error('Please enter a sentence before you test it!')
+    
+if __name__ == "__main__":
+    main()
