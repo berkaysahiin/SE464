@@ -1,4 +1,6 @@
-# Hate Speech Labeler
+# SE464 Machine Learning Project
+
+## Hate Speech Labeler
 
 A Streamlit app for detecting hate speech using a fine-tuned BERT-based model.
 
@@ -7,21 +9,20 @@ A Streamlit app for detecting hate speech using a fine-tuned BERT-based model.
 1. **Local Installation:**
    - Clone the repository:
      ```bash
-     git clone https://github.com/your-username/hate-speech-labeler.git
+     git clone https://github.com/berkaysahiin/hate-speech-labeler.git](https://github.com/berkaysahiin/SE464.git
      ```
    - Change into the directory:
      ```bash
-     cd hate-speech-labeler
+     cd SE464
      ```
    - Install the dependencies:
      ```bash
-     pip install -r app/requirements.txt
+     pip install -r requirements.txt
      ```
    - Run the Streamlit app:
      ```bash
-     streamlit run app/main_app.py
+     streamlit run main.py
      ```
-   - Open your browser and go to [http://localhost:8501](http://localhost:8501) to use the app.
 
 2. **Deployment:**
    - The app is deployed and accessible at [hatespeechlabeler.streamlit.app](https://hatespeechlabeler.streamlit.app).
