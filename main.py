@@ -8,6 +8,16 @@ model = AutoModelForSequenceClassification.from_pretrained(model_path)
 
 classifier = pipeline(task='text-classification', model=model, tokenizer=tokenizer, return_all_scores=True)
 
+label_to_format = {
+    'toxic': 'Toxic',
+    'severe_toxic': 'Severe Toxic',
+    'obscene' : 'Obscene',
+    'threat' : 'Threat',
+    'identity_hate' : 'Identity Hate',
+    'insult' : 'Insult'
+}
+
+
 def test_sentence(sentence: str, thresh_hold=0.2, debug=False):
     results = classifier(sentence)
 
@@ -22,7 +32,8 @@ def test_sentence(sentence: str, thresh_hold=0.2, debug=False):
     for result in results[0]:
         if result['score'] > thresh_hold:
             formatted_score = "{:.2f}".format(result['score'])
-            may_include.append((result['label'], formatted_score))
+            formatted_label = label_to_format[result['label']]
+            may_include.append((formatted_label, formatted_score))
     
     if may_include:
         for label, score in may_include:
@@ -31,13 +42,14 @@ def test_sentence(sentence: str, thresh_hold=0.2, debug=False):
     else:
         st.info('Your sentence is totally fine')
 
-st.title('Sentence Test App')
-user_sentence = st.text_input('Enter your sentence to test it', value='I love NLP')
-user_threshold = st.slider('Select threshold value', min_value=0.0, max_value=1.0, value=0.4, step=0.01)
+if __name__ == "__main__":
+    st.title('Sentence Test App')
+    user_sentence = st.text_input('Enter your sentence to test it', value='I love NLP')
+    user_threshold = st.slider('Select threshold value', min_value=0.0, max_value=1.0, value=0.4)
 
-if st.button('Test your sentence'):
-    if user_sentence:
-        st.success('Testing complete!')
-        test_sentence(sentence=user_sentence, thresh_hold=user_threshold)
-    else:
-        st.error('Please enter a sentence before you test it!')
+    if st.button('Test your sentence'):
+        if user_sentence:
+            st.success('Testing complete!')
+            test_sentence(sentence=user_sentence, thresh_hold=user_threshold)
+        else:
+            st.error('Please enter a sentence before you test it!')
