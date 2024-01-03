@@ -17,7 +17,7 @@ label_to_format = {
     'insult' : 'Insult'
 }
 
-@st.cache_resource(show_spinner=False)
+@st.cache_resource
 def test_sentence(sentence: str, thresh_hold=0.2, debug=False):
     results = classifier(sentence)
 
