@@ -4,7 +4,6 @@
 
 Streamlit app for hate speech detection using a fine-tuned BERT-based model. The model is trained on the [Jigsaw Toxic Comment Classification Challenge](https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge) dataset for multi-label classification.
 
-- The app is deployed and accessible [here.](https://hatespeechlabeler.streamlit.app)
 - Code and data is available at this [notebook](https://www.kaggle.com/code/berkaysahiin/bert-fine-tune).
 
  ## Local Installation 
