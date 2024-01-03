@@ -18,7 +18,7 @@ Streamlit app for hate speech detection using a fine-tuned BERT-based model. The
    - Virtual Environment and Dependencies:
      ```bash
      virtualenv venv
-     ./venv/bin/activate 
+     .\venv\Scripts\activate
      pip install -r requirements.txt
      ```
    - Run the Streamlit app:
